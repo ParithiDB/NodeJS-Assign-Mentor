@@ -45,10 +45,10 @@ studentsRouter.post('/createStudent',(req,res,next) => {
 
 studentsRouter.patch('/:studentId', (req,res,next) => {
     const updatedData = req.body;
-    const {studentId} = req.params;
+    const { studentId } = req.params;
     const updateStudent = new mongoose.Types.ObjectId(studentId);
     studentModel.findOneAndUpdate(
-        {_id:updateStudent},updatedData,{new:true})
+        {_id: updateStudent},updatedData,{new:true})
     .then(response => {
         return res.status(200).json({
             result : response,

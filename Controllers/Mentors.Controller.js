@@ -43,7 +43,7 @@ MentorsRouter.post('/createMentor', (req,res,next) => {
 
 MentorsRouter.patch('/:mentorId', (req,res,next) => {
     const updatedData = req.body;
-    const {mentorId} = req.params;
+    const { mentorId } = req.params;
     const Id = new mongoose.Types.ObjectId(mentorId);
     MentorModel.findOneAndUpdate(
         {_id: Id}, updatedData, {new: true})
