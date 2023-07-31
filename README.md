@@ -1,36 +1,33 @@
 
-# Day 38 Task NodeJS Hall-Booking
+# Day 39 Task NodeJS Assign-Mentor
 
 ## Deployed Link
-[https://hallbooking-cugq.onrender.com/](https://hallbooking-cugq.onrender.com/)
+[https://assign-mentor-csug.onrender.com/](https://assign-mentor-csug.onrender.com/)
 
-## To GET all Users detail
-GET Method: [https://hallbooking-cugq.onrender.com/users](https://hallbooking-cugq.onrender.com/users)
+## To GET all Mentor detail
+GET Method: [https://assign-mentor-csug.onrender.com/mentor](https://assign-mentor-csug.onrender.com/mentor)
 
-## To Create a New User
-POST Method: [https://hallbooking-cugq.onrender.com/users/createUser](https://hallbooking-cugq.onrender.com/users/createUser)
-
----
-
-## To GET all Hall detail
-GET Method: [https://hallbooking-cugq.onrender.com/halls](https://hallbooking-cugq.onrender.com/halls)
-
-## To Create a New Hall
-POST Method: [https://hallbooking-cugq.onrender.com/halls/createHall](https://hallbooking-cugq.onrender.com/halls/createHall)
+## To Create a New Mentor
+POST Method: [https://assign-mentor-csug.onrender.com/mentor/createMentor](https://assign-mentor-csug.onrender.com/mentor/createMentor)
 
 ---
 
-## To GET all Booking detail
-GET Method: [https://hallbooking-cugq.onrender.com/booking](https://hallbooking-cugq.onrender.com/booking)
+## To GET all Student detail
+GET Method: [https://assign-mentor-csug.onrender.com/student](https://assign-mentor-csug.onrender.com/student)
 
-## To Book a Hall
-POST Method: [https://hallbooking-cugq.onrender.com/booking/createBooking](https://hallbooking-cugq.onrender.com/booking/createBooking)
+## To Create a New Student
+POST Method: [https://assign-mentor-csug.onrender.com/student/createStudent](https://assign-mentor-csug.onrender.com/student/createStudent)
 
-## To GET all Booked Halls
-GET Method: [https://hallbooking-cugq.onrender.com/booking/bookedHall](https://hallbooking-cugq.onrender.com/booking/bookedHall)
+---
 
-## To GET a certain User Booking Detail
-- [https://hallbooking-cugq.onrender.com/booking/Sachin%20Tendulkar](https://hallbooking-cugq.onrender.com/booking/Sachin%20Tendulkar)
-- [https://hallbooking-cugq.onrender.com/booking/Rahul%20Dravid](https://hallbooking-cugq.onrender.com/booking/Rahul%20Dravid)
-- [https://hallbooking-cugq.onrender.com/booking/Sourav%20Ganguly](https://hallbooking-cugq.onrender.com/booking/Sourav%20Ganguly)
-- [https://hallbooking-cugq.onrender.com/booking/VVS%20Laxman](https://hallbooking-cugq.onrender.com/booking/VVS%20Laxman)
+## To GET a certain Mentor detail
+GET Method: [https://assign-mentor-csug.onrender.com/mentor/Sachin](https://assign-mentor-csug.onrender.com/mentor/Sachin)
+
+## To GET a certain Students detail
+GET Method: [https://assign-mentor-csug.onrender.com/student/SKY](https://assign-mentor-csug.onrender.com/student/SKY)
+
+## To ASSIGN a Student to Mentor
+PATCH Method: [https://assign-mentor-csug.onrender.com/mentor/64c7151467c3fef91e372c34](https://assign-mentor-csug.onrender.com/mentor/64c7151467c3fef91e372c34)
+
+## To RE-ASSIGN a Mentor to Student
+PATCH Method: [https://assign-mentor-csug.onrender.com/student/64c718d567c3fef91e372c48](https://assign-mentor-csug.onrender.com/student/64c718d567c3fef91e372c48)

@@ -3,45 +3,38 @@ const APP_SERVER = express();
 
 APP_SERVER.get('/', (req, res, next) => {
     res.send(`
-      <h1>Hall-Booking</h1>
-      <h1>Day 38 Task NodeJS Hall-Booking</h1>
-  
-      <h3>Deployed Link</h3>
-      <a target="_blank" href="https://hallbooking-cugq.onrender.com/"><i>https://hallbooking-cugq.onrender.com/</i></a>
-  
-      <h3>To GET all Users detail</h3>
-      <p>GET Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/users"><i>https://hallbooking-cugq.onrender.com/users</i></a></p>
-  
-      <h3>To Create a New User</h3>
-      <p>POST Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/users/createUser"><i>https://hallbooking-cugq.onrender.com/users/createUser</i></a></p>
-  
-      <hr/>
-  
-      <h3>To GET all Hall detail</h3>
-      <p>GET Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/halls"><i>https://hallbooking-cugq.onrender.com/halls</i></a></p>
-  
-      <h3>To Create a New Hall</h3>
-      <p>POST Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/halls/createHall"><i>https://hallbooking-cugq.onrender.com/halls/createHall</i></a></p>
-  
-      <hr/>
-  
-      <h3>To GET all Booking detail</h3>
-      <p>GET Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/booking"><i>https://hallbooking-cugq.onrender.com/booking</i></a></p>
-  
-      <h3>To Create a New User</h3>
-      <p>POST Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/booking/createBooking"><i>https://hallbooking-cugq.onrender.com/booking/createBooking</i></a></p>
-  
-      <h3>To GET all Booked Halls</h3>
-      <p>GET Method: <a target="_blank" href="https://hallbooking-cugq.onrender.com/booking/bookedHall"><i>https://hallbooking-cugq.onrender.com/booking/bookedHall</i></a></p>
-  
-      <h3>To GET a certain User Booking Detail</h3>
-      <p>GET Method:</p>
-      <ul>
-        <li><a target="_blank" href="https://hallbooking-cugq.onrender.com/booking/Sachin%20Tendulkar"><i>https://hallbooking-cugq.onrender.com/booking/Sachin%20Tendulkar</i></a></li>
-        <li><a target="_blank" href="https://hallbooking-cugq.onrender.com/booking/Rahul%20Dravid"><i>https://hallbooking-cugq.onrender.com/booking/Rahul%20Dravid</i></a></li>
-        <li><a target="_blank" href="https://hallbooking-cugq.onrender.com/booking/Sourav%20Ganguly"><i>https://hallbooking-cugq.onrender.com/booking/Sourav%20Ganguly</i></a></li>
-        <li><a target="_blank" href="https://hallbooking-cugq.onrender.com/booking/VVS%20Laxman"><i>https://hallbooking-cugq.onrender.com/booking/VVS%20Laxman</i></a></li>
-      </ul>
+    <h1>Day 39 Task NodeJS Assign-Mentor</h1>
+
+    <h2>Deployed Link</h2>
+    <p><a target="_blank" href="https://assign-mentor-csug.onrender.com/">https://assign-mentor-csug.onrender.com/</a></p>
+
+    <h2>To GET all Mentor detail</h2>
+    <p>GET Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/mentor">https://assign-mentor-csug.onrender.com/mentor</a></p>
+
+    <h2>To Create a New Mentor</h2>
+    <p>POST Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/mentor/createMentor">https://assign-mentor-csug.onrender.com/mentor/createMentor</a></p>
+
+    <hr />
+
+    <h2>To GET all Student detail</h2>
+    <p>GET Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/student">https://assign-mentor-csug.onrender.com/student</a></p>
+
+    <h2>To Create a New Student</h2>
+    <p>POST Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/student/createStudent">https://assign-mentor-csug.onrender.com/student/createStudent</a></p>
+
+    <hr />
+
+    <h2>To GET a certain Mentor detail</h2>
+    <p>GET Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/mentor/Sachin">https://assign-mentor-csug.onrender.com/mentor/Sachin</a></p>
+
+    <h2>To GET a certain Students detail</h2>
+    <p>GET Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/student/SKY">https://assign-mentor-csug.onrender.com/student/SKY</a></p>
+
+    <h2>To ASSIGN a Student to Mentor</h2>
+    <p>PATCH Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/mentor/64c7151467c3fef91e372c34">https://assign-mentor-csug.onrender.com/mentor/64c7151467c3fef91e372c34</a></p>
+
+    <h2>To RE-ASSIGN a Mentor to Student</h2>
+    <p>PATCH Method: <a target="_blank" href="https://assign-mentor-csug.onrender.com/student/64c718d567c3fef91e372c48">https://assign-mentor-csug.onrender.com/student/64c718d567c3fef91e372c48</a></p>
     `);
   });
   
