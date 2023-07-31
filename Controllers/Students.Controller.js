@@ -8,20 +8,20 @@ studentsRouter.get('/',(req,res,next) => {
         return res.status(200).json({
             result : students,
             success : true,
-            message : "students collection create successfully!!"
+            message : "Students fetched Successfully"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "students collection create failed",
+            message : "Students fetch Failed!",
             Error : err
         })
     })
 })
 
 
-studentsRouter.post('/createStudents',(req,res,next) => {
+studentsRouter.post('/createStudent',(req,res,next) => {
     const data = req.body;
     const NewStudent = new studentModel(data);
     NewStudent.save()
@@ -29,13 +29,13 @@ studentsRouter.post('/createStudents',(req,res,next) => {
         return res.status(200).json({
             result : result,
             success : true,
-            message : "New Student Added SuccessFully"
+            message : "Student created SuccessFully"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "New Student Added Failed",
+            message : "Student creation Failed",
             Error : err
         })
     })
@@ -47,18 +47,19 @@ studentsRouter.patch('/:studentId', (req,res,next) => {
     const updatedData = req.body;
     const {studentId} = req.params;
     const updateStudent = new mongoose.Types.ObjectId(studentId);
-    studentModel.findOneAndUpdate({_id:updateStudent},updatedData,{new:true})
+    studentModel.findOneAndUpdate(
+        {_id:updateStudent},updatedData,{new:true})
     .then(response => {
         return res.status(200).json({
             result : response,
             success : true,
-            message : "student data update successfully"
+            message : "Student update Successfull"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "student data update failed",
+            message : "Student update failed",
             Error : err
         })
     })
@@ -73,13 +74,13 @@ studentsRouter.get('/:studentName', (req,res,next) => {
         return res.status(200).json({
             result : matchedData,
             success : true,
-            message : "find student detail successfully"
+            message : "Student detail found"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "find student detail failed",
+            message : "Student not found",
             Error : err
         })
     })

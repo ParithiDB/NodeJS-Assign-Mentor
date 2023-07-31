@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const BASE_URL = process.env.NODE_ENVIRONMENT === 'development'
  ? `mongodb://127.0.0.1:27017/${process.env.DEVELOPMENT_MONGODB_DBNAME}`
- : `mongodb+srv://${process.env.PRODUCTION_MONGODB_USERNAME}:${process.env.PRODUCTION_MONGODB_PASSWORD}@cluster0.riyqjnx.mongodb.net/${process.env.PRODUCTION_MONGODB_DBNAME}`;
+ : `mongodb+srv://${process.env.PRODUCTION_MONGODB_USERNAME}:${process.env.PRODUCTION_MONGODB_PASSWORD}@cluster0.f2vcugj.mongodb.net/${process.env.PRODUCTION_MONGODB_DBNAME}`;
 
 
 mongoose.connect(BASE_URL).then((response) => {

@@ -1,89 +1,90 @@
-const mentorsRouter = require('express').Router();
-const mentorModel = require('../Models/Mentors.model');
+const MentorsRouter = require('express').Router();
+const MentorModel = require('../Models/Mentors.model');
 var mongoose = require("mongoose");
 
-mentorsRouter.get('/',(req,res,next) => {
-    mentorModel.find()
+MentorsRouter.get('/',(req,res,next) => {
+    MentorModel.find()
     .then(mentors => {
         return res.status(200).json({
             result : mentors,
             success : true,
-            message : "mentors collection create successfully!!"
+            message : "Mentors fetched Successfully!!!"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "mentors collection create failed",
+            message : "Mentors not fetched",
             Error : err
         })
     })
 })
 
 
-mentorsRouter.post('/createMentors', (req,res,next) => {
+MentorsRouter.post('/createMentor', (req,res,next) => {
     const data = req.body;
-    const NewMentor = new mentorModel(data);
+    const NewMentor = new MentorModel(data);
     NewMentor.save()
     .then(result => {
         return res.status(200).json({
             result : result,
         success : true,
-        message : "NewMenor Added Successfully!!"
+        message : "Mentor Added Successfully!!"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "NewMentor Added Failed",
+            message : "Mentor Failed to Add!",
             Error : err
         })
     })
 })
 
-mentorsRouter.patch('/:mentorId', (req,res,next) => {
+MentorsRouter.patch('/:mentorId', (req,res,next) => {
     const updatedData = req.body;
     const {mentorId} = req.params;
     const Id = new mongoose.Types.ObjectId(mentorId);
-    mentorModel.findOneAndUpdate({_id:Id}, updatedData, {new:true})
+    MentorModel.findOneAndUpdate(
+        {_id: Id}, updatedData, {new: true})
     .then((response) => {
         if(response && response._id){
             return res.status(200).json({
                 result : response,
                 success : true,
-                message : "mentors update successfully"
+                message : "Mentor Updated"
         })
     }
 })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "mentor update failed",
+            message : "Mentor failed to Update",
             Error : err
         })
     })
 })
 
 
-mentorsRouter.get('/:mentorName', (req,res,next) => {
+MentorsRouter.get('/:mentorName', (req,res,next) => {
     const {mentorName} = req.params;
-    mentorModel.find()
+    MentorModel.find()
     .then(response => {
         const matchedData = response.filter(item => item.name === mentorName);
         return res.status(200).json({
             result : matchedData,
             success : true,
-            message : "find mentor detail successfully"
+            message : "Mentor details found"
         })
     })
     .catch(err => {
         return res.status(401).json({
             success : false,
-            message : "find mentor detail failed",
+            message : "Mentor details not found",
             Error : err
         })
     })
 })
 
 
-module.exports = mentorsRouter;
+module.exports = MentorsRouter;
