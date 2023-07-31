@@ -67,10 +67,10 @@ MentorsRouter.patch('/:mentorId', (req,res,next) => {
 
 
 MentorsRouter.get('/:mentorName', (req,res,next) => {
-    const {mentorName} = req.params;
+    const { mentorName } = req.params;
     MentorModel.find()
     .then(response => {
-        const matchedData = response.filter(item => item.name === mentorName);
+        const matchedData = response.filter(item => item.mentorName === mentorName);
         return res.status(200).json({
             result : matchedData,
             success : true,
